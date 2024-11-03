@@ -1,27 +1,28 @@
-# Angularcomposition
+# AngularAuthCrud(En desarrollo)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## Descripción del Proyecto
 
-## Development server
+Este proyecto es una aplicación web desarrollada en Angular que incluye un sistema de autenticación simple. Hasta ahora, se ha implementado la funcionalidad de **inicio de sesión** y **registro**, junto con las autenticaciones necesarias para gestionar el acceso de los usuarios. En la página principal, actualmente hay un simple botón para salir de la aplicación. A futuro, se planea seguir desarrollando y mejorando la interfaz y las funcionalidades.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades Implementadas
 
-## Code scaffolding
+- **Registro de Usuarios**: Los usuarios pueden crear cuentas nuevas.
+- **Inicio de Sesión**: Permite a los usuarios existentes iniciar sesión en sus cuentas.
+- **Autenticación**: Se han implementado mecanismos de autenticación para proteger las rutas de la aplicación.
+- **Salida**: Un botón que permite a los usuarios cerrar sesión.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologías Utilizadas
 
-## Build
+- **Angular**: Framework utilizado para construir la aplicación.
+- **Firebase**: Utilizado para gestionar la autenticación de usuarios.
+- **RxJS**: Librería para gestionar la programación reactiva en Angular.
+- **Tailwind CSS**: Utilizado para estilizar la aplicación de manera rápida y eficiente.
+- **Flowbite**: Componente de interfaz de usuario para mejorar la experiencia visual de la aplicación.
+- **ngx-sonner**: Para notificaciones y alertas en la interfaz.
+### Estructura de Dependencias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+El archivo de configuración `package.json` incluye tanto dependencias como devDependencies, las cuales aseguran que el proyecto funcione correctamente y que los entornos de desarrollo estén bien configurados.
 
-## Running unit tests
+## Estado Actual
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+La aplicación está funcional en su estado actual, con todas las características mencionadas implementadas y probadas. El siguiente paso será seguir desarrollando la aplicación, mejorando la interfaz y añadiendo nuevas funcionalidades.
