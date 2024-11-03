@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../../data-access/auth.service';
 import { toast } from 'ngx-sonner';
 import { Router, RouterLink } from '@angular/router';
+import { GoogleButtonComponent } from '../../ui/google-button/google-button.component';
 
 // Interfaz para definir la estructura del formulario de registro
 interface FormSignUp {
@@ -20,7 +21,7 @@ interface FormSignUp {
 @Component({
   selector: 'app-sign-up', // Selector del componente para usar en HTML
   standalone: true, // Indica que el componente es independiente
-  imports: [ReactiveFormsModule, CommonModule, RouterLink], // Importa el módulo de formularios reactivos
+  imports: [ReactiveFormsModule, CommonModule, RouterLink, GoogleButtonComponent], // Importa el módulo de formularios reactivos
   templateUrl: './sign-up.component.html', // Archivo de plantilla HTML del componente
 })
 export default class SignUpComponent {
@@ -69,6 +70,17 @@ export default class SignUpComponent {
       // si todo va correctamente rediriga a als tareas
       this._router.navigateByUrl('/tasks');
 
+    } catch (error) {
+      toast.error('Ocurrio un error.')
+    }
+  }
+
+  async submitWithGoogle(){
+    try {
+      await this._authService.signInWithGoogle()
+      toast.success('Bienvenido')
+      // si todo va correctamente rediriga a als tareas
+      this._router.navigateByUrl('/tasks');
     } catch (error) {
       toast.error('Ocurrio un error.')
     }

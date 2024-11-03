@@ -5,6 +5,7 @@ import { AuthService } from '../../data-access/auth.service';
 import { Router, RouterLink } from '@angular/router';
 import { isRequired } from '../../utils/validators';
 import { CommonModule } from '@angular/common';
+import { GoogleButtonComponent } from '../../ui/google-button/google-button.component';
 
 interface FormSignIn {
   email: FormControl<string | null>;
@@ -13,7 +14,7 @@ interface FormSignIn {
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink, CommonModule],
+  imports: [ReactiveFormsModule, RouterLink, CommonModule, GoogleButtonComponent],
   templateUrl: './sign-in.component.html',
   styles: ``
 })
@@ -67,5 +68,15 @@ export default class SignInComponent {
        toast.error('Ocurrio un error.')
      }
    }
+   async submitWithGoogle(){
+    try {
+      await this._authService.signInWithGoogle()
+      toast.success('Bienvenido de nuevo')
+      // si todo va correctamente rediriga a als tareas
+      this._router.navigateByUrl('/tasks');
+    } catch (error) {
+      toast.error('Ocurrio un error.')
+    }
+  }
 
 }
