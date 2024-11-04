@@ -11,14 +11,5 @@ import { AuthStateService } from './shared/auth-state.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  // title = 'AngularAuthCrud';
-
-  private _authState = inject(AuthStateService)
-  private _router = inject(Router)
-
-  async logOut( ){
-    await this._authState.logOut()
-    this._router.navigateByUrl('/auth/sign-in')
-
-  }
+ 
 }
