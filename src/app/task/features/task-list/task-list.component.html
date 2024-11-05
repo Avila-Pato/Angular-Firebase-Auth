@@ -7,6 +7,9 @@
     Nueva tarea
   </a>
   <!-- Usar ngIf para verificar que tasks$ tiene datos antes de pasar a app-table -->
-  <app-table *ngIf="tasks$ | async as tasks" [tasks]="tasks"></app-table>
+  <app-table *ngIf="tasks$ | async as tasks" 
+             [tasks]="tasks" 
+             [deleteTask]="deleteTask">
+  </app-table>
 </section>
 
