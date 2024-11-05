@@ -11,7 +11,7 @@ export default  [
   loadComponent: () => import('./task-form/task-form.component')
 },
 {
-    path: 'edit/:id',
+    path: 'edit/:idTask',
     loadComponent: () => import('./task-form/task-form.component')
   }
 

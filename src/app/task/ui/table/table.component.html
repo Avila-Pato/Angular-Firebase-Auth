@@ -8,13 +8,14 @@
         <th class="px-6 py-3">Completado</th>
         <th class="px-6 py-3">Id</th>
         <th class="px-6 py-3">Editar</th>
+        <th class="px-6 py-3">Borrar</th>
       </tr>
     </thead>
     <tbody>
       <!-- Si hay tareas, las mostramos en la tabla -->
       <ng-container *ngIf="tasks.length; else noTasks">
         <tr
-          *ngFor="let task of tasks; trackBy: trackById"
+          *ngFor="let task of tasks; "
           class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
         >
           <!-- Título de la tarea -->
